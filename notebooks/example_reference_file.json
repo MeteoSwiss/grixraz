@@ -1,0 +1,43 @@
+{
+    "version": 1,
+    "refs": {
+        ".zgroup": "{\"zarr_format\":2}",
+        ".zattrs": "{\"GRIB_centre\":\"lssw\",\"GRIB_centreDescription\":\"Zurich\",\"GRIB_edition\":2,\"GRIB_subCentre\":255,\"coordinates\":\"heightAboveGround latitude longitude step time valid_time\",\"institution\":\"Zurich\"}",
+        "v10\/.zarray": "{\"chunks\":[786,1170],\"compressor\":null,\"dtype\":\"<f8\",\"fill_value\":null,\"filters\":[{\"dtype\":\"float64\",\"id\":\"grib\",\"var\":\"v10\"}],\"order\":\"C\",\"shape\":[786,1170],\"zarr_format\":2}",
+        "v10\/0.0": [
+            "{{u}}",
+            6437997,
+            1839459
+        ],
+        "v10\/.zattrs": "{\"GRIB_NV\":0,\"GRIB_Nx\":1170,\"GRIB_Ny\":786,\"GRIB_angleOfRotationInDegrees\":0.0,\"GRIB_cfName\":\"northward_wind\",\"GRIB_cfVarName\":\"v10\",\"GRIB_dataType\":\"fc\",\"GRIB_gridDefinitionDescription\":\"Rotated latitude\\\/longitude\",\"GRIB_gridType\":\"rotated_ll\",\"GRIB_iDirectionIncrementInDegrees\":0.01,\"GRIB_iScansNegatively\":0,\"GRIB_jDirectionIncrementInDegrees\":0.01,\"GRIB_jPointsAreConsecutive\":0,\"GRIB_jScansPositively\":1,\"GRIB_latitudeOfFirstGridPointInDegrees\":-4.46,\"GRIB_latitudeOfLastGridPointInDegrees\":3.39,\"GRIB_latitudeOfSouthernPoleInDegrees\":-43.0,\"GRIB_longitudeOfFirstGridPointInDegrees\":-6.86,\"GRIB_longitudeOfLastGridPointInDegrees\":4.83,\"GRIB_longitudeOfSouthernPoleInDegrees\":10.0,\"GRIB_missingValue\":3.4028234663852886e+38,\"GRIB_name\":\"10 metre V wind component\",\"GRIB_numberOfPoints\":919620,\"GRIB_paramId\":166,\"GRIB_shortName\":\"10v\",\"GRIB_stepType\":\"instant\",\"GRIB_stepUnits\":1,\"GRIB_typeOfLevel\":\"heightAboveGround\",\"GRIB_units\":\"m s**-1\",\"_ARRAY_DIMENSIONS\":[\"y\",\"x\"],\"long_name\":\"10 metre V wind component\",\"standard_name\":\"northward_wind\",\"units\":\"m s**-1\"}",
+        "heightAboveGround\/.zarray": "{\"chunks\":[],\"compressor\":null,\"dtype\":\"<f8\",\"fill_value\":null,\"filters\":null,\"order\":\"C\",\"shape\":[],\"zarr_format\":2}",
+        "heightAboveGround\/0": "\u0000\u0000\u0000\u0000\u0000\u0000$@",
+        "heightAboveGround\/.zattrs": "{\"_ARRAY_DIMENSIONS\":[],\"long_name\":\"height above the surface\",\"positive\":\"up\",\"standard_name\":\"height\",\"units\":\"m\"}",
+        "latitude\/.zarray": "{\"chunks\":[786,1170],\"compressor\":null,\"dtype\":\"<f8\",\"fill_value\":null,\"filters\":[{\"dtype\":\"float64\",\"id\":\"grib\",\"var\":\"latitude\"}],\"order\":\"C\",\"shape\":[786,1170],\"zarr_format\":2}",
+        "latitude\/0.0": [
+            "{{u}}",
+            6437997,
+            1839459
+        ],
+        "latitude\/.zattrs": "{\"_ARRAY_DIMENSIONS\":[\"y\",\"x\"],\"long_name\":\"latitude\",\"standard_name\":\"latitude\",\"units\":\"degrees_north\"}",
+        "longitude\/.zarray": "{\"chunks\":[786,1170],\"compressor\":null,\"dtype\":\"<f8\",\"fill_value\":null,\"filters\":[{\"dtype\":\"float64\",\"id\":\"grib\",\"var\":\"longitude\"}],\"order\":\"C\",\"shape\":[786,1170],\"zarr_format\":2}",
+        "longitude\/0.0": [
+            "{{u}}",
+            6437997,
+            1839459
+        ],
+        "longitude\/.zattrs": "{\"_ARRAY_DIMENSIONS\":[\"y\",\"x\"],\"long_name\":\"longitude\",\"standard_name\":\"longitude\",\"units\":\"degrees_east\"}",
+        "step\/.zarray": "{\"chunks\":[],\"compressor\":null,\"dtype\":\"<f8\",\"fill_value\":null,\"filters\":null,\"order\":\"C\",\"shape\":[],\"zarr_format\":2}",
+        "step\/0": "\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000",
+        "step\/.zattrs": "{\"_ARRAY_DIMENSIONS\":[],\"long_name\":\"time since forecast_reference_time\",\"standard_name\":\"forecast_period\",\"units\":\"hours\"}",
+        "time\/.zarray": "{\"chunks\":[],\"compressor\":null,\"dtype\":\"<i8\",\"fill_value\":null,\"filters\":null,\"order\":\"C\",\"shape\":[],\"zarr_format\":2}",
+        "time\/0": "base64:gN93ZAAAAAA=",
+        "time\/.zattrs": "{\"_ARRAY_DIMENSIONS\":[],\"calendar\":\"proleptic_gregorian\",\"long_name\":\"initial time of forecast\",\"standard_name\":\"forecast_reference_time\",\"units\":\"seconds since 1970-01-01T00:00:00\"}",
+        "valid_time\/.zarray": "{\"chunks\":[],\"compressor\":null,\"dtype\":\"<i8\",\"fill_value\":null,\"filters\":null,\"order\":\"C\",\"shape\":[],\"zarr_format\":2}",
+        "valid_time\/0": "base64:gN93ZAAAAAA=",
+        "valid_time\/.zattrs": "{\"_ARRAY_DIMENSIONS\":[],\"calendar\":\"proleptic_gregorian\",\"long_name\":\"time\",\"standard_name\":\"time\",\"units\":\"seconds since 1970-01-01T00:00:00\"}"
+    },
+    "templates": {
+        "u": "\/store\/s83\/osm\/KENDA-1\/ANASURF23\/det\/lafsurf2023060100_det"
+    }
+}
