@@ -6,6 +6,13 @@ of NWP data as _virtual_ Zarr stores: no extracting, moving or copying.
 
 You can find a demo in `notebooks/demo.ipynb` and an example of a reference file in `notebooks/example_reference_file.json`.
 
+### Installation
+- Run `source install_micromamba.sh` in order to install micromamba.
+- Inside your source code folder, run `micromamba create -f environment.yaml` in order to setup the micromamba environment.
+- Activate your environment by `micromamba activate grixraz`. Now you have installed eccodes and poetry.
+- Install the dependencies managed by poetry: `poetry install`
+
+
 ### Running the demo
 - valid user account on tsa
 - git clone this repo, install in a new environment with [poetry](https://python-poetry.org/docs/#installing-with-the-official-installer)
