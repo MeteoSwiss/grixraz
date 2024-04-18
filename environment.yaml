@@ -1,0 +1,8 @@
+name: grixraz
+channels:
+  - conda-forge
+dependencies:
+  - python>=3.11,<3.12
+  - pip>=22.3
+  - poetry
+  - eccodes==2.33
