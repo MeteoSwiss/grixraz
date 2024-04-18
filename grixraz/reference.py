@@ -4,10 +4,10 @@ from kerchunk.grib2 import scan_grib
 from kerchunk.combine import merge_vars
 from concurrent.futures import ThreadPoolExecutor
 from tqdm.auto import tqdm
-import ujson # like json, but ultra faster
+import ujson  # like json, but ultra faster
 
 
-def make_json_name(file: str, message: dict[str,str]):
+def make_json_name(file: str, message: dict[str, str]):
     """Make a json name from a file name and message number."""
     name = file.split("/")[-1]
     var = list(message["refs"].keys())[2].split("/")[0]
@@ -34,8 +34,13 @@ def merged_var_refs(grib_filename, out_dir, **scan_kwargs):
         f.write(ujson.dumps(ref, indent=4))
     return fn.as_posix()
 
+
 def create_references(
-    files: list[str], out_dir: str = "references/", n_workers=5, merge_messages: bool=True, **scan_kwargs
+    files: list[str],
+    out_dir: str = "references/",
+    n_workers=5,
+    merge_messages: bool = True,
+    **scan_kwargs,
 ):
     """Create references for a list of files."""
     out_dir = Path(out_dir)
@@ -48,7 +53,13 @@ def create_references(
     ref_fn(files[0])
 
     with ThreadPoolExecutor(max_workers=n_workers) as executor:
-        results = list(tqdm(executor.map(ref_fn, files), desc = "Creating references...", total=len(files)))
+        results = list(
+            tqdm(
+                executor.map(ref_fn, files),
+                desc="Creating references...",
+                total=len(files),
+            )
+        )
 
     # flatten the list
     if not merge_messages:
