@@ -11,6 +11,7 @@ You can find a demo in `notebooks/demo.ipynb` and an example of a reference file
 - Inside your source code folder, run `micromamba create -f environment.yaml` in order to setup the micromamba environment.
 - Activate your environment by `micromamba activate grixraz`. Now you have installed eccodes and poetry.
 - Install the dependencies managed by poetry: `poetry install`
+- Setup the eccodes COSMO definitions env var: `source setup_env.sh`
 
 
 ### Running the demo
