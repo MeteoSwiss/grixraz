@@ -8,8 +8,8 @@ jobs:
       with:
         micromamba-version: '1.5.8-0' # any version from https://github.com/mamba-org/micromamba-releases
         environment-file: environment.yml
-      cache-environment: true
-      post-cleanup: 'all'
+        cache-environment: true
+        post-cleanup: 'all'
     - name: Setup poetry
       run: poetry install
     - name: Run tests
