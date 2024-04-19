@@ -1,9 +1,9 @@
 import eccodes
-import grixraz
+import grixraz  # noqa
 
 
 def test_grib_varnames():
-    file = "/scratch/fzanetta/tmp/hackathon/lafsurf2023083123_det"
+    file = "/scratch/fzanetta/tmp/hackathon/ANASURF23/lafsurf2023083123_det"
     varnames = set()
     with open(file, "rb") as gribfile:
         while True:
