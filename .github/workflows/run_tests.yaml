@@ -1,0 +1,28 @@
+name: Tests
+on: [push, pull_request]
+jobs:
+  build:
+    name: Run all tests with pytest inside the Python environment
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@v4
+    - uses: mamba-org/setup-micromamba@v1
+      with:
+        micromamba-version: 'latest' # any version from https://github.com/mamba-org/micromamba-releases
+        environment-file: environment.yaml
+        cache-environment: true
+        post-cleanup: 'all'
+    - name: Setup poetry
+      run: poetry install
+      shell: micromamba-shell {0}
+    - name: Setup eccodes
+      run: source setup_env.sh
+      shell: micromamba-shell {0}
+    - name: Run tests
+      run: pytest --junitxml=pytest.xml --cov-report=term-missing:skip-covered --cov=grixraz tests/ | tee pytest-coverage.txt
+      shell: micromamba-shell {0}
+    - name: Pytest coverage comment
+      uses: MishaKav/pytest-coverage-comment@main
+      with:
+        pytest-coverage-path: ./pytest-coverage.txt
+        junitxml-path: ./pytest.xml
