@@ -1,11 +1,14 @@
+import os
+from pathlib import Path
 import eccodes
 import grixraz  # noqa
 
 
 def test_grib_varnames():
-    file = "/scratch/fzanetta/tmp/hackathon/ANASURF23/lafsurf2023083123_det"
+    # we want to make sure that variable names are translated according to the eccodes COSMO definition
+    file_path = os.path.join(Path(__file__).parent, 'data', 'grib_test_file')
     varnames = set()
-    with open(file, "rb") as gribfile:
+    with open(file_path, "rb") as gribfile:
         while True:
             message_id = eccodes.codes_grib_new_from_file(gribfile)
             if message_id is None:
