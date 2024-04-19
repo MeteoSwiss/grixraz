@@ -1,5 +1,5 @@
 name: Tests
-on: [push]
+on: [push, pull_request]
 jobs:
   build:
     name: Run all tests with pytest inside the Python environment
