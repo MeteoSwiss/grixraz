@@ -10,9 +10,9 @@ jobs:
         micromamba-version: 'latest' # any version from https://github.com/mamba-org/micromamba-releases
         environment-file: environment.yaml
         cache-environment: true
-        init-shell: bash
         post-cleanup: 'all'
     - name: Setup poetry
       run: poetry install
+      shell: micromamba-shell {0}
     - name: Run tests
       run: pytest tests
