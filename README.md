@@ -1,5 +1,7 @@
 # grixraz: mch GRIB archives as virtual Zarr stores
 [![Tests](https://github.com/MeteoSwiss/grixraz/actions/workflows/run_tests.yaml/badge.svg)](https://github.com/MeteoSwiss/grixraz/actions/workflows/run_tests.yaml)
+<!-- Pytest Coverage Comment:Begin -->
+<!-- Pytest Coverage Comment:End -->
 
 This is a proof-of-concept library that uses
 [`kerchunk`](https://fsspec.github.io/kerchunk/) to represent MeteoSwiss GRIB archives
