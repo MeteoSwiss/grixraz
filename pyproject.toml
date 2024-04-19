@@ -7,7 +7,7 @@ readme = "README.md"
 packages = [{include = "grixraz"}]
 
 [tool.poetry.dependencies]
-python = "^3.10"
+python = "~3.11"
 kerchunk = {git = "https://github.com/fsspec/kerchunk"}
 cfgrib = "^0.9.10.4"
 xarray = "^2023.12.0"
@@ -20,8 +20,9 @@ jupyter = "^1.0.0"
 matplotlib = "^3.8.2"
 ruff = "^0.3.7"
 pre-commit = "^3.7.0"
-pytest = "*"
-pytest-cov = "*"
+pytest = "~8.1.1"
+pytest-cov = "~5.0.0"
+pyzmq = "26.0.0"  # newest version not found
 
 [build-system]
 requires = ["poetry-core"]
