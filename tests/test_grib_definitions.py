@@ -1,4 +1,5 @@
 import eccodes
+import grixraz
 
 
 def test_grib_varnames():
