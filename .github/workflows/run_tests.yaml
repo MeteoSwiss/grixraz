@@ -14,6 +14,9 @@ jobs:
     - name: Setup poetry
       run: poetry install
       shell: micromamba-shell {0}
+    - name: Setup eccodes
+      run: source setup_env.sh
+      shell: micromamba-shell {0}
     - name: Run tests
       run: pytest tests
       shell: micromamba-shell {0}
