@@ -1,10 +1,12 @@
-from pathlib import Path
-from functools import partial
-from kerchunk.grib2 import scan_grib
-from kerchunk.combine import merge_vars
 from concurrent.futures import ThreadPoolExecutor
-from tqdm.auto import tqdm
+from functools import partial
+from pathlib import Path
+
 import ujson  # like json, but ultra faster
+from tqdm.auto import tqdm
+
+from kerchunk.combine import merge_vars
+from kerchunk.grib2 import scan_grib
 
 
 def make_json_name(file: str, message: dict[str, str]):
