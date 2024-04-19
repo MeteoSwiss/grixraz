@@ -1,10 +1,9 @@
-from concurrent.futures import ThreadPoolExecutor
+from concurrent.futures import ProcessPoolExecutor
 from functools import partial
 from pathlib import Path
 
 import ujson  # like json, but ultra faster
 from tqdm.auto import tqdm
-
 from kerchunk.combine import merge_vars
 from kerchunk.grib2 import scan_grib
 
@@ -54,7 +53,7 @@ def create_references(
     # for an obscure reason we have to do this
     ref_fn(files[0])
 
-    with ThreadPoolExecutor(max_workers=n_workers) as executor:
+    with ProcessPoolExecutor(max_workers=n_workers) as executor:
         results = list(
             tqdm(
                 executor.map(ref_fn, files),
