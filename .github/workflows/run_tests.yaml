@@ -1,0 +1,17 @@
+on: [push]
+jobs:
+  build:
+  name: Run all tests with pytest inside the Python environment
+  runs-on: ubuntu-latest
+  steps:
+  - uses: mamba-org/setup-micromamba@v1
+    with:
+      micromamba-version: '1.5.8-0' # any version from https://github.com/mamba-org/micromamba-releases
+      environment-file: environment.yml
+    cache-environment: true
+    post-cleanup: 'all'
+  - name: Setup poetry
+    run: poetry install
+  - name: Run tests
+    run: pytest tests
+  
