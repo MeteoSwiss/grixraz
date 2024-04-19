@@ -16,3 +16,4 @@ jobs:
       shell: micromamba-shell {0}
     - name: Run tests
       run: pytest tests
+      shell: micromamba-shell {0}
