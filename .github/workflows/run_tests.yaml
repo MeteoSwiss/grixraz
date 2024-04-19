@@ -19,5 +19,10 @@ jobs:
       run: source setup_env.sh
       shell: micromamba-shell {0}
     - name: Run tests
-      run: pytest tests
+      run: pytest --junitxml=pytest.xml --cov-report=term-missing:skip-covered --cov=grixraz tests/ | tee pytest-coverage.txt
       shell: micromamba-shell {0}
+    - name: Pytest coverage comment
+      uses: MishaKav/pytest-coverage-comment@main
+      with:
+        pytest-coverage-path: ./pytest-coverage.txt
+        junitxml-path: ./pytest.xml
